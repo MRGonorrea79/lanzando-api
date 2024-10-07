@@ -1,4 +1,5 @@
-import { newDiaryEntry, Weather, visibility,  WeatherEnum, visibilityEnum } from "../types";
+import { newDiaryEntry } from "../types";
+import { Weather,visibility } from "../enums";
 
 const isString = (string:string): boolean => {
     return typeof string === "string" 
@@ -8,11 +9,11 @@ const isDate = (date : string): boolean =>{
     return Boolean(Date.parse(date))
 }
 const isWeather = (string:any) : boolean =>{
-    return Object.values(WeatherEnum).includes(string)
+    return Object.values(Weather).includes(string)
 }
 
 const isVisibility = (string : any) :boolean =>{
-    return Object.values(visibilityEnum).includes(string)
+    return Object.values(visibility).includes(string)
 }
 
 const parseComment = (commentRequest : any): String => {
